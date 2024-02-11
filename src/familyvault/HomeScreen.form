@@ -49,7 +49,7 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -89,7 +89,7 @@
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="jTITLE" alignment="0" pref="84" max="32767" attributes="0"/>
+              <Component id="jTITLE" alignment="0" pref="72" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -334,6 +334,9 @@
               <Color blue="ab" green="d6" red="f1" type="rgb"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pMEM1MouseClicked"/>
+          </Events>
 
           <Layout>
             <DimensionLayout dim="0">

@@ -200,6 +200,7 @@ public class LogIn extends javax.swing.JFrame {
                 fname = rs.getString("FAMNAME");
             }
         } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
             e.printStackTrace();
         } finally {
             // Close the result set and prepared statement
@@ -211,6 +212,7 @@ public class LogIn extends javax.swing.JFrame {
                     ps.close();
                 }
             } catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, e);
                 e.printStackTrace();
             }
         }

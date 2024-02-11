@@ -147,10 +147,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel2" max="32767" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jLabel2" max="32767" attributes="0"/>
                   <Component id="tFN" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -193,10 +190,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel6" max="32767" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                   <Component id="tMN" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -239,10 +233,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel7" max="32767" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
                   <Component id="tLN" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -285,10 +276,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel8" max="32767" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jLabel8" alignment="0" max="32767" attributes="0"/>
                   <Component id="tNICKN" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
@@ -331,10 +319,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel9" max="32767" attributes="0"/>
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="jLabel9" alignment="0" max="32767" attributes="0"/>
                   <Component id="tROLE" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>

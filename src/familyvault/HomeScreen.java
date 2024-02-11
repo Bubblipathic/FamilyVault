@@ -31,6 +31,7 @@ public class HomeScreen extends javax.swing.JFrame {
         //Center the frame on the screen
         setLocationRelativeTo(null);
         
+        // Initialize the JPanel objects and add them to the array
         JPanel[] panels = new JPanel[6];
         panels[0] = pMEM1;
         panels[1] = pMEM2;
@@ -172,7 +173,7 @@ public class HomeScreen extends javax.swing.JFrame {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTITLE, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+            .addComponent(jTITLE, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE)
         );
 
         java.awt.FlowLayout flowLayout1 = new java.awt.FlowLayout(java.awt.FlowLayout.LEADING, 10, 5);
@@ -240,6 +241,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.setLayout(new java.awt.GridLayout(3, 2, 15, 10));
 
         pMEM1.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM1MouseClicked(evt);
+            }
+        });
 
         jPanel14.setBackground(new java.awt.Color(219, 48, 82));
         jPanel14.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -655,7 +661,7 @@ public class HomeScreen extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -686,6 +692,11 @@ public class HomeScreen extends javax.swing.JFrame {
         new DelMember().setVisible(true); 
         dispose();
     }//GEN-LAST:event_Add3ActionPerformed
+
+    private void pMEM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM1MouseClicked
+        new Categories().setVisible(true); 
+        dispose();
+    }//GEN-LAST:event_pMEM1MouseClicked
 
     
     /**

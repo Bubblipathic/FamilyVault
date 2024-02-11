@@ -61,7 +61,6 @@ public class SignUp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(242, 255, 255));
         setMaximumSize(new java.awt.Dimension(360, 640));
-        setPreferredSize(new java.awt.Dimension(360, 640));
         setResizable(false);
         setSize(new java.awt.Dimension(360, 640));
 
