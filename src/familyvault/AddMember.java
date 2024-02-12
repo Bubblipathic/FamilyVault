@@ -87,7 +87,7 @@ public class AddMember extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(219, 48, 82));
 
-        jTITLE.setFont(new java.awt.Font("Forte", 0, 36)); // NOI18N
+        jTITLE.setFont(new java.awt.Font("Jokerman", 1, 24)); // NOI18N
         jTITLE.setForeground(new java.awt.Color(241, 214, 171));
         jTITLE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jTITLE.setText("FAMILY VAULT");

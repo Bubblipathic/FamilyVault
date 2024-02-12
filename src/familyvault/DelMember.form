@@ -97,7 +97,7 @@
         <Component class="javax.swing.JLabel" name="jTITLE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Forte" size="30" style="0"/>
+              <Font name="Jokerman" size="24" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ab" green="d6" red="f1" type="rgb"/>
