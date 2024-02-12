@@ -401,7 +401,8 @@ public class AddMember extends javax.swing.JFrame {
         
         try {
             // Query to find the maximum MEM_ID value
-            p = con.prepareStatement("SELECT MEM_ID FROM FAM_MEMBER");
+            p = con.prepareStatement("SELECT MEM_ID FROM FAM_MEMBER WHERE CODE = ?");
+            p.setInt(1, LogIn.inputCODE);
             r = p.executeQuery();
 
             Set<Integer> existingIds = new HashSet<>();
@@ -435,7 +436,8 @@ public class AddMember extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Added to Database");
             
            
-            p = con.prepareStatement("SELECT COUNT(*) AS MEM_COUNT FROM FAM_MEMBER");
+            p = con.prepareStatement("SELECT COUNT(*) AS MEM_COUNT FROM FAM_MEMBER WHERE CODE = ?");
+            p.setInt(1, LogIn.inputCODE);
             r = p.executeQuery();
 
             int memCount = 0;
@@ -457,6 +459,9 @@ public class AddMember extends javax.swing.JFrame {
             } catch (SQLException e) {
                 JOptionPane.showMessageDialog(null,e);
             }
+        
+        new AddMember().setVisible(true);   
+        dispose();
         
     }//GEN-LAST:event_bADDActionPerformed
 

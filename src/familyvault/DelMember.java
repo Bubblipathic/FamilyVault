@@ -60,8 +60,9 @@ public class DelMember extends javax.swing.JFrame {
         try {
             int i;
             for ( i=0; i <6; i++ ){
-                    p = con.prepareStatement("SELECT FNAME FROM FAM_MEMBER WHERE MEM_ID = ?");
+                    p = con.prepareStatement("SELECT FNAME FROM FAM_MEMBER WHERE MEM_ID = ? and CODE = ?");
                     p.setInt(1, i+1);
+                    p.setInt(2, LogIn.inputCODE);
                     r = p.executeQuery();
 
                     // If the result set has any rows, it means a match was found
@@ -699,8 +700,9 @@ public class DelMember extends javax.swing.JFrame {
         for ( i = 0; i < 6; i++) {
             if (checkboxes[i].isSelected()) {
                 try {
-                    p = con.prepareStatement("DELETE FROM FAM_MEMBER WHERE MEM_ID = ?");
+                    p = con.prepareStatement("DELETE FROM FAM_MEMBER WHERE MEM_ID = ? and CODE = ?");
                     p.setInt(1, i+1);
+                    p.setInt(2, LogIn.inputCODE);
                     r = p.executeQuery();
 
                 } catch (SQLException e) {

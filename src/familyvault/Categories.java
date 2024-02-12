@@ -4,13 +4,11 @@
  */
 package familyvault;
 
+import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+
 
 /**
  *
@@ -20,6 +18,10 @@ public class Categories extends javax.swing.JFrame {
     PreparedStatement p;
     ResultSet r=null;
     Connection con;
+    static String cat;
+    static Color catColor = new Color (255,51,51);
+    static String Title ="";
+    static String iconPath ="";
 
 
     /**
@@ -31,12 +33,7 @@ public class Categories extends javax.swing.JFrame {
         //Center the frame on the screen
         setLocationRelativeTo(null);
         
- 
-
-        
         jTITLE.setText(LogIn.inputFNAME.toUpperCase() +" FAMILY");
-        
-  
         
     }
    
@@ -167,6 +164,11 @@ public class Categories extends javax.swing.JFrame {
         jPanel6.add(jPanel7);
 
         jPanel8.setBackground(new java.awt.Color(255, 102, 0));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
         jPanel8.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 20, 5));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/familyvault/icons8-medical-50.png"))); // NOI18N
@@ -174,12 +176,17 @@ public class Categories extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Cooper Black", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(241, 214, 171));
-        jLabel6.setText("Medicine");
+        jLabel6.setText("Medical");
         jPanel8.add(jLabel6);
 
         jPanel6.add(jPanel8);
 
         jPanel9.setBackground(new java.awt.Color(255, 51, 153));
+        jPanel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel9MouseClicked(evt);
+            }
+        });
         jPanel9.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 20, 5));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/familyvault/icons8-bank-cards-50.png"))); // NOI18N
@@ -193,6 +200,11 @@ public class Categories extends javax.swing.JFrame {
         jPanel6.add(jPanel9);
 
         jPanel10.setBackground(new java.awt.Color(242, 109, 115));
+        jPanel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel10MouseClicked(evt);
+            }
+        });
         jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT, 20, 5));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/familyvault/icons8-school-50.png"))); // NOI18N
@@ -249,9 +261,40 @@ public class Categories extends javax.swing.JFrame {
     }//GEN-LAST:event_AddActionPerformed
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
-        new Legal().setVisible(true);
+        cat = "legal";
+        catColor = new Color (255,51,51);
+        iconPath = "/familyvault/icons8-government-50.png";
+        Title = "Legal";    
+        new File_List().setVisible(true);
         dispose();
     }//GEN-LAST:event_jPanel7MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        cat = "medicine";
+        catColor = new Color (255,102,0);
+        iconPath = "/familyvault/icons8-medical-50.png";
+        Title = "Medicine";
+        new File_List().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel9MouseClicked
+        cat = "finance";
+        catColor = new Color (255,51,153);
+        iconPath = "/familyvault/icons8-bank-cards-50.png";
+        Title = "Finance";
+        new File_List().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel9MouseClicked
+
+    private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
+        cat = "school";
+        catColor = new Color (242,109,115);
+        Title = "School";
+        iconPath = "/familyvault/icons8-school-50.png";
+        new File_List().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel10MouseClicked
 
     
     /**

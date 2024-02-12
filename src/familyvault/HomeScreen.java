@@ -20,6 +20,7 @@ public class HomeScreen extends javax.swing.JFrame {
     PreparedStatement p;
     ResultSet r=null;
     Connection con;
+    static int MEMID;
 
 
     /**
@@ -57,8 +58,9 @@ public class HomeScreen extends javax.swing.JFrame {
         jTITLE.setText(LogIn.inputFNAME.toUpperCase() +" FAMILY");
         
         try {
-          // Query to find the maximum MEM_ID value
-            p = con.prepareStatement("SELECT COUNT(*) AS MEM_COUNT FROM FAM_MEMBER");
+            // Query to find the maximum MEM_ID value
+            p = con.prepareStatement("SELECT COUNT(*) AS MEM_COUNT FROM FAM_MEMBER WHERE CODE = ?");
+            p.setInt(1, LogIn.inputCODE);
             r = p.executeQuery();
 
             int memCount = 0;
@@ -77,8 +79,9 @@ public class HomeScreen extends javax.swing.JFrame {
             //Display all existingMembers
             int i;
             for ( i=0; i <6; i++ ){
-                    p = con.prepareStatement("SELECT FNAME FROM FAM_MEMBER WHERE MEM_ID = ?");
+                    p = con.prepareStatement("SELECT FNAME FROM FAM_MEMBER WHERE MEM_ID = ? and CODE = ?");
                     p.setInt(1, i+1);
+                    p.setInt(2, LogIn.inputCODE);
                     r = p.executeQuery();
 
                     // If the result set has any rows, it means a match was found
@@ -312,6 +315,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.add(pMEM1);
 
         pMEM2.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM2MouseClicked(evt);
+            }
+        });
 
         jPanel26.setBackground(new java.awt.Color(219, 48, 82));
         jPanel26.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -378,6 +386,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.add(pMEM2);
 
         pMEM3.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM3MouseClicked(evt);
+            }
+        });
 
         jPanel28.setBackground(new java.awt.Color(219, 48, 82));
         jPanel28.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -444,6 +457,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.add(pMEM3);
 
         pMEM4.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM4MouseClicked(evt);
+            }
+        });
 
         jPanel31.setBackground(new java.awt.Color(219, 48, 82));
         jPanel31.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -510,6 +528,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.add(pMEM4);
 
         pMEM5.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM5MouseClicked(evt);
+            }
+        });
 
         jPanel34.setBackground(new java.awt.Color(219, 48, 82));
         jPanel34.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -576,6 +599,11 @@ public class HomeScreen extends javax.swing.JFrame {
         jPanel5.add(pMEM5);
 
         pMEM6.setBackground(new java.awt.Color(241, 214, 171));
+        pMEM6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pMEM6MouseClicked(evt);
+            }
+        });
 
         jPanel37.setBackground(new java.awt.Color(219, 48, 82));
         jPanel37.setPreferredSize(new java.awt.Dimension(0, 50));
@@ -689,14 +717,45 @@ public class HomeScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_AddActionPerformed
 
     private void Add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Add3ActionPerformed
-        new DelMember().setVisible(true); 
+        new DelMember().setVisible(true);
         dispose();
     }//GEN-LAST:event_Add3ActionPerformed
 
     private void pMEM1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM1MouseClicked
         new Categories().setVisible(true); 
+        MEMID = 1;
         dispose();
     }//GEN-LAST:event_pMEM1MouseClicked
+
+    private void pMEM2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM2MouseClicked
+        new Categories().setVisible(true); 
+        MEMID = 2;
+        dispose();
+    }//GEN-LAST:event_pMEM2MouseClicked
+
+    private void pMEM3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM3MouseClicked
+        new Categories().setVisible(true); 
+        MEMID = 3;
+        dispose();
+    }//GEN-LAST:event_pMEM3MouseClicked
+
+    private void pMEM4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM4MouseClicked
+        new Categories().setVisible(true); 
+        MEMID = 4;
+        dispose();
+    }//GEN-LAST:event_pMEM4MouseClicked
+
+    private void pMEM5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM5MouseClicked
+        new Categories().setVisible(true); 
+        MEMID = 5;
+        dispose();
+    }//GEN-LAST:event_pMEM5MouseClicked
+
+    private void pMEM6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pMEM6MouseClicked
+        new Categories().setVisible(true); 
+        MEMID = 6;
+        dispose();
+    }//GEN-LAST:event_pMEM6MouseClicked
 
     
     /**
