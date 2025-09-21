@@ -2,7 +2,8 @@
 
 **Application for Safe and Secure Electronic Storage of Important Documents**  
 
-FamilyVault simplifies accessing vital personal documents during emergencies. Securely store essential records digitally for quick access, ensuring convenience when physical copies are misplaced. Our user-friendly platform streamlines the process, offering a reliable and efficient means for families to manage and retrieve important documents in times of urgent need.  
+FamilyVault is a simple **locally stored** application for securely managing family documents.  
+It lets families create a vault, add members, and upload files for quick offline access in times of need.  
 
 ---
 
