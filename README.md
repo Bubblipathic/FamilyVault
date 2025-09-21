@@ -15,7 +15,7 @@ FamilyVault simplifies accessing vital personal documents during emergencies. Se
 
 ---
 
-## 🏗️ System Architecture  
+## 🏗️ Tools
 
 - **Language:** Java  
 - **IDE:** NetBeans IDE  
@@ -24,7 +24,6 @@ FamilyVault simplifies accessing vital personal documents during emergencies. Se
 - **External Tool:** Apache PDFBox  
 - **Database:** Oracle  
 
-![System Architecture](e62e015f-e7fd-4523-bf24-168e305ca71f.png)  
 
 ---
 
@@ -32,9 +31,13 @@ FamilyVault simplifies accessing vital personal documents during emergencies. Se
 
 - **Family Vaults** → contains family information  
 - **Family Members** → linked to vaults (1 to many)  
-- **Files** → linked to members and vaults (1 to many)  
+- **Files** → linked to members and vaults (1 to many)
 
-![Database Structure](00eb24c6-a768-4f73-9ed2-aacccaad02eb.png)  
+---
+
+## 📷 Frames
+
+![Frames Screenshot](Screenshots/Screenshot/png)  
 
 ---
 
