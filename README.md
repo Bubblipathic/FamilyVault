@@ -37,7 +37,7 @@ FamilyVault simplifies accessing vital personal documents during emergencies. Se
 
 ## 📷 Frames
 
-![Frames Screenshot](Screenshots/Screenshot/png)  
+![Frame Screenshot](/Screenshots/Screenshot.png)  
 
 ---
 
