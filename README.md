@@ -1,6 +1,6 @@
 # FamilyVault  
 
-**Application for Safe and Secure Electronic Storage of Important Documents**  
+**Application for Electronic Storage of Important Documents**  
 
 FamilyVault is a simple **locally stored** application for securely managing family documents.  
 It lets families create a vault, add members, and upload files for quick offline access in times of need.  
