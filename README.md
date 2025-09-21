@@ -53,7 +53,7 @@ FamilyVault simplifies accessing vital personal documents during emergencies. Se
 ### Option 2: Build from Source  
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/familyvault.git
+   git clone https://github.com/Bubblipathic/FamilyVault.git
    cd familyvault
    ```
 2. Open the project in **NetBeans IDE**  
